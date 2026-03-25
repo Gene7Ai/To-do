@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待办清单</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="app-card">
+      <div class="app-header">
+        <p class="app-tag">TODO APP</p>
+        <h1>小胖雪的待办清单</h1>
+        <p class="app-subtitle">把今天要做的事一件件完成</p>
+      </div>
+
+      <div class="input-area">
+        <input type="text" id="todo-input" placeholder="比如：给奶龙领星星">
+        <button id="add-btn">添加任务</button>
+      </div>
+
+      <div class="filter-area">
+  <button id="filter-all" class="active">全部</button>
+  <button id="filter-active">未完成</button>
+  <button id="filter-completed">已完成</button>
+</div>
+
+<div class="stats-area">
+  <div class="stat-card">
+    <span class="stat-label">总任务</span>
+    <strong id="total-count">0</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-label">未完成</span>
+    <strong id="active-count">0</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-label">已完成</span>
+    <strong id="completed-count">0</strong>
+  </div>
+</div>
+
+<ul id="todo-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
