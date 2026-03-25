@@ -1,6 +1,8 @@
 const input = document.querySelector("#todo-input");
 const addBtn = document.querySelector("#add-btn");
 const todoList = document.querySelector("#todo-list");
+const progressText = document.querySelector("#progress-text");
+const progressFill = document.querySelector("#progress-fill");
 
 const filterAllBtn = document.querySelector("#filter-all");
 const filterActiveBtn = document.querySelector("#filter-active");
@@ -41,9 +43,13 @@ function updateStats() {
     return todo.completed;
   }).length;
 
+  const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+
   totalCount.textContent = total;
   activeCount.textContent = active;
   completedCount.textContent = completed;
+  progressText.textContent = percent + "%";
+  progressFill.style.width = percent + "%";
 }
 
 function updateFilterButtons() {
